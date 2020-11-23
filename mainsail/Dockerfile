@@ -12,6 +12,6 @@ RUN wget -q -O mainsail.zip ${MAINSAIL_VER} && \
 # nginx
 FROM nginx:stable-alpine
 
-COPY nginx_conf.d/* /etc/conf.d/
+COPY nginx_conf.d/* /etc/nginx/conf.d/
 COPY  --from=builder /mainsail /usr/share/mainsail
 
